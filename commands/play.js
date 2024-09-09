@@ -96,7 +96,7 @@ async function play(client, interaction) {
                     iconURL: config.CheckmarkIcon,
                     url: config.SupportServer
                 })
-                .setDescription(Yêu cầu của bạn đã được xử lý thành công.**\n**➡️ Vui lòng sử dụng các nút để điều khiển phát lại**')
+                .setDescription( '** 🔜Yêu cầu của bạn đã được xử lý thành công.**\n**➡️ Vui lòng sử dụng các nút để điều khiển phát lại**')
 .setFooter({ text: '🎶 Thưởng thức âm nhạc của bạn!'}),setFooter({ text: '🎶 Thưởng thức âm nhạc của bạn!'}),
             new EmbedBuilder()
                 .setColor(config.embedColor)
