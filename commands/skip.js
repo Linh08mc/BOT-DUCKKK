@@ -36,7 +36,7 @@ async function skip(client, interaction) {
 
 module.exports = {
     name: "skip",
-    description: ""Bỏ qua bài hát hiện tại",
+    description: "" Bỏ qua bài hát hiện tại ",
     permissions: "0x0000000000000800",
     options: [],
     run: skip
