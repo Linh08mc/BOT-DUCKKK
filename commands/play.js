@@ -1,20 +1,6 @@
 /*
 
-  ________.__                        _____.___.___________
- /  _____/|  | _____    ____  ____   \__  |   |\__    ___/
-/   \  ___|  | \__  \ _/ ___\/ __ \   /   |   |  |    |   
-\    \_\  \  |__/ __ \\  \__\  ___/   \____   |  |    |   
- \______  /____(____  /\___  >___  >  / ______|  |____|   
-        \/          \/     \/    \/   \/                  
-
-╔════════════════════════════════════════════════════════════════════════╗
-║                                                                        ║
-║  ## Created by GlaceYT!                                                ║
-║  ## Feel free to utilize any portion of the code                       ║
-║  ## DISCORD :  https://discord.com/invite/xQF9f9yUEM                   ║
-║  ## YouTube : https://www.youtube.com/@GlaceYt                         ║
-║                                                                        ║
-╚════════════════════════════════════════════════════════════════════════╝
+  
 
 
 */
@@ -32,7 +18,7 @@ async function play(client, interaction) {
             const embed = new EmbedBuilder()
                 .setColor('#ff0000')
                 .setTitle('Voice Channel Required')
-                .setDescription('❌ You need to be in a voice channel to use this command.');
+                .setDescription('❌ Bạn cần phải ở trong kênh thoại để sử dụng lệnh này.');
 
             await interaction.reply({ embeds: [embed], ephemeral: true });
             return;
@@ -84,7 +70,7 @@ async function play(client, interaction) {
             const errorEmbed = new EmbedBuilder()
                 .setColor(config.embedColor)
                 .setTitle('Error')
-                .setDescription('❌ No results found.');
+                .setDescription('❌ Không tìm thấy kết quả nào.');
 
             await interaction.editReply({ embeds: [errorEmbed] });
             return;
@@ -100,8 +86,8 @@ async function play(client, interaction) {
                     iconURL: config.CheckmarkIcon,
                     url: config.SupportServer
                 })
-                .setDescription('**➡️ Your request has been successfully processed.**\n**➡️ Please use buttons to control playback**')
-                 .setFooter({ text: '🎶 Enjoy your music!'}),
+                .setDescription('**➡️ Yêu cầu của bạn đã được xử lý thành công.**\nVui lòng sử dụng các nút để điều khiển phát lại**')
+.setFooter({ text: '🎶 Thưởng thức âm nhạc của bạn!'}),setFooter({ text: '🎶 Thưởng thức âm nhạc của bạn!'}),
 
             new EmbedBuilder()
                 .setColor(config.embedColor)
@@ -110,9 +96,8 @@ async function play(client, interaction) {
                     iconURL: config.CheckmarkIcon,
                     url: config.SupportServer
                 })
-                .setDescription('**➡️ Your request has been successfully processed.**\n**➡️ Please use buttons to control playback**')
-                 .setFooter({ text: '🎶 Enjoy your music!'}),
-
+                .setDescription(Yêu cầu của bạn đã được xử lý thành công.**\n**➡️ Vui lòng sử dụng các nút để điều khiển phát lại**')
+.setFooter({ text: '🎶 Thưởng thức âm nhạc của bạn!'}),setFooter({ text: '🎶 Thưởng thức âm nhạc của bạn!'}),
             new EmbedBuilder()
                 .setColor(config.embedColor)
                 .setAuthor({
@@ -120,8 +105,7 @@ async function play(client, interaction) {
                     iconURL: config.CheckmarkIcon,
                     url: config.SupportServer
                 })
-                .setDescription('**➡️ Your request has been successfully processed.**\n**➡️ Please use buttons to control playback**')
-                .setFooter({ text: '🎶 Enjoy your music!'})
+                .setDescription(setFooter({ text: '🎶 Thưởng thức âm nhạc của bạn!'})
         ];
 
         const randomIndex = Math.floor(Math.random() * embeds.length);
@@ -132,7 +116,7 @@ async function play(client, interaction) {
         const errorEmbed = new EmbedBuilder()
             .setColor('#ff0000')
             .setTitle('Error')
-            .setDescription('❌ An error occurred while processing your request.');
+            .setDescription('❌ Đã xảy ra lỗi khi xử lý yêu cầu của bạn.');
 
         await interaction.editReply({ embeds: [errorEmbed] });
     }
@@ -140,7 +124,7 @@ async function play(client, interaction) {
 
 module.exports = {
     name: "play",
-    description: "Play a song from a name or link",
+    description: "Phát một bài hát từ tên hoặc liên kết",
     permissions: "0x0000000000000800",
     options: [{
         name: 'name',
@@ -157,21 +141,6 @@ module.exports = {
 
 /*
 
-  ________.__                        _____.___.___________
- /  _____/|  | _____    ____  ____   \__  |   |\__    ___/
-/   \  ___|  | \__  \ _/ ___\/ __ \   /   |   |  |    |   
-\    \_\  \  |__/ __ \\  \__\  ___/   \____   |  |    |   
- \______  /____(____  /\___  >___  >  / ______|  |____|   
-        \/          \/     \/    \/   \/                  
-
-╔════════════════════════════════════════════════════════════════════════╗
-║                                                                        ║
-║  ## Created by GlaceYT!                                                ║
-║  ## Feel free to utilize any portion of the code                       ║
-║  ## DISCORD :  https://discord.com/invite/xQF9f9yUEM                   ║
-║  ## YouTube : https://www.youtube.com/@GlaceYt                         ║
-║                                                                        ║
-╚════════════════════════════════════════════════════════════════════════╝
-
+  
 
 */
