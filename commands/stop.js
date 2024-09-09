@@ -9,7 +9,7 @@ async function stop(client, interaction) {
             const errorEmbed = new EmbedBuilder()
                 .setColor('#ff0000')
                 .setTitle('Error')
-                .setDescription('❌ No active player found.');
+                .setDescription('❌ Không tìm thấy người chơi đang hoạt động.');
 
             await interaction.reply({ embeds: [errorEmbed], ephemeral: true });
             return;
@@ -20,7 +20,7 @@ async function stop(client, interaction) {
 
         const embed = new EmbedBuilder()
             .setColor(config.embedColor)
-            .setDescription('**⏹️ Playback has been stopped and player destroyed!**');
+            .setDescription('**⏹️ Phát lại đã dừng và trình phát đã bị hủy!**');
 
         await interaction.reply({ embeds: [embed] });
 
@@ -29,7 +29,7 @@ async function stop(client, interaction) {
         const errorEmbed = new EmbedBuilder()
             .setColor('#ff0000')
             .setTitle('Error')
-            .setDescription('❌ An error occurred while processing your request.');
+            .setDescription('❌ Đã xảy ra lỗi khi xử lý yêu cầu của bạn.');
 
         await interaction.reply({ embeds: [errorEmbed], ephemeral: true });
     }
@@ -37,7 +37,7 @@ async function stop(client, interaction) {
 
 module.exports = {
     name: "stop",
-    description: "Stop the current song and destroy the player",
+    description: "Dừng bài hát hiện tại và phá hủy trình phát",
     permissions: "0x0000000000000800",
     options: [],
     run: stop
