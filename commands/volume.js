@@ -10,21 +10,21 @@ async function volume(client, interaction) {
             const errorEmbed = new EmbedBuilder()
                 .setColor('#ff0000')
                 .setTitle('Error')
-                .setDescription('❌ No active player found.');
+                .setDescription('❌ Không tìm thấy người chơi đang hoạt động.');
 
             await interaction.reply({ embeds: [errorEmbed], ephemeral: true });
             return;
         }
 
         if (volume < 0 || volume > 100) {
-            return interaction.reply({ content: 'Volume level must be between 0 and 100.', ephemeral: true });
+            return interaction.reply({ content: 'Mức âm lượng phải nằm trong khoảng từ 0 đến 100.', ephemeral: true });
         }
 
         player.setVolume(volume);
 
         const embed = new EmbedBuilder()
-            .setColor(config.embedColor)
-            .setDescription(`🔊 Volume has been set to **${volume}%**`);
+            .setColor(config.embedColor)Âm lượng đã được thiết lập thành
+            .setDescription(`🔊 Âm lượng đã được thiết lập thành **${volume}%**`);
 
         return interaction.reply({ embeds: [embed] });
     } catch (error) {
@@ -35,11 +35,11 @@ async function volume(client, interaction) {
 
 module.exports = {
     name: "volume",
-    description: "Set the volume of the current song",
+    description: "Đặt âm lượng của bài hát hiện tại",
     permissions: "0x0000000000000800",
     options: [{
         name: 'level',
-        description: 'Volume level (0-100)',
+        description: 'Cấp độ âm lượng (0-100)',
         type: ApplicationCommandOptionType.Integer,
         required: true
     }],
