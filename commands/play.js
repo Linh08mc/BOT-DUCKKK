@@ -121,11 +121,27 @@ async function play(client, interaction) {
                     iconURL: config.CheckmarkIcon,
                     url: config.SupportServer
                 })
+                .setDescription('**➡️ Your request has been successfully processed.**\n**➡️ Please use buttons to control playback**')
+                .setFooter({ text: '🎶 Enjoy your music!'})
+        ];
+
+        const randomIndex = Math.floor(Math.random() * embeds.length);
+        await interaction.followUp({ embeds: [embeds[randomIndex]] });
+
+    } catch (error) {
+        console.error('Error processing play command:', error);
+        const errorEmbed = new EmbedBuilder()
+            .setColor('#ff0000')
+            .setTitle('Error')
+            .setDescription('❌ An error occurred while processing your request.');
+
+        await interaction.editReply({ embeds: [errorEmbed] });
+    }
 }
 
 module.exports = {
     name: "play",
-    description: "Phát một bài hát từ tên hoặc liên kết",
+    description: "Play a song from a name or link",
     permissions: "0x0000000000000800",
     options: [{
         name: 'name',
@@ -137,6 +153,7 @@ module.exports = {
     queueNames: queueNames,
     requesters: requesters 
 };
+
 
 
 
