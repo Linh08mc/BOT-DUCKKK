@@ -23,7 +23,7 @@ async function volume(client, interaction) {
         player.setVolume(volume);
 
         const embed = new EmbedBuilder()
-            .setColor(config.embedColor)Âm lượng đã được thiết lập thành
+            .setColor(config.embedColor)
             .setDescription(`🔊 Âm lượng đã được thiết lập thành **${volume}%**`);
 
         return interaction.reply({ embeds: [embed] });
