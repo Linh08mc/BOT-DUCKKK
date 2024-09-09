@@ -9,7 +9,7 @@ async function pause(client, interaction) {
             const errorEmbed = new EmbedBuilder()
                 .setColor('#ff0000')
                 .setTitle('Error')
-                .setDescription('❌ No active player found.');
+                .setDescription('❌ Không tìm thấy người chơi đang hoạt động.');
 
             await interaction.reply({ embeds: [errorEmbed], ephemeral: true });
             return;
@@ -19,7 +19,7 @@ async function pause(client, interaction) {
 
         const embed = new EmbedBuilder()
             .setColor(config.embedColor)
-            .setDescription('**⏸️ Playback has been paused!**');
+            .setDescription('**⏸️ Phát lại đã bị tạm dừng!**');
 
         await interaction.reply({ embeds: [embed] });
 
@@ -28,7 +28,7 @@ async function pause(client, interaction) {
         const errorEmbed = new EmbedBuilder()
             .setColor('#ff0000')
             .setTitle('Error')
-            .setDescription('❌ An error occurred while processing your request.');
+            .setDescription('❌ Đã xảy ra lỗi khi xử lý yêu cầu của bạn.');
 
         await interaction.reply({ embeds: [errorEmbed], ephemeral: true });
     }
@@ -36,7 +36,7 @@ async function pause(client, interaction) {
 
 module.exports = {
     name: "pause",
-    description: "Pause the current song",
+    description: "Tạm dừng bài hát hiện tại",
     permissions: "0x0000000000000800",
     options: [],
     run: pause
