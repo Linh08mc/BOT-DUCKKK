@@ -59,7 +59,7 @@ function initializePlayer(client) {
                 name: 'Now Playing',
                 iconURL: config.MusicIcon
             })
-            .setDescription('🎶 **Controls:**\n 🔁 `Loop`, ❌ `Disable`, ⏭️ `Skip`, 📜 `Queue`, 🗑️ `Clear`\n ⏹️ `Stop`, ⏸️ `Pause`, ▶️ `Resume`, 🔊 `Vol +`, 🔉 `Vol -`')
+            .setDescription('🎶 **Bảng điều khiển:**\n 🔁 `Lặp lại`, ❌ `Vô hiệu hóa`, ⏭️ `Nhạc tiếp`, 📜 `Hàng đợi`, 🗑️ `Dọn dẹp`\n ⏹️ `Dừng lại`, ⏸️ `Tiếp tục`, ▶️ `Bản tóm tắt`, 🔊 `Vol +`, 🔉 `Vol -`')
             .setImage('attachment://musicard.png')
             .setColor(config.embedColor);
 
@@ -86,7 +86,7 @@ function initializePlayer(client) {
             if (!voiceChannel || voiceChannel.id !== playerChannel) {
                 const vcEmbed = new EmbedBuilder()
                     .setColor(config.embedColor)
-                    .setDescription('🔒 **You need to be in the same voice channel to use the controls!**');
+                    .setDescription('🔒 **Bạn cần phải ở cùng một kênh thoại để sử dụng các điều khiển!**');
                 const sentMessage = await channel.send({ embeds: [vcEmbed] });
                 setTimeout(() => sentMessage.delete().catch(console.error), config.embedTimeout * 1000);
                 return;
@@ -98,7 +98,7 @@ function initializePlayer(client) {
                 player.stop();
                 const skipEmbed = new EmbedBuilder()
                     .setColor(config.embedColor)
-                    .setTitle("⏭️ **Player will play the next song!**")
+                    .setTitle("⏭️ **Người chơi sẽ chơi bài hát tiếp theo!**")
                     .setTimestamp();
 
                 const sentMessage = await channel.send({ embeds: [skipEmbed] });
@@ -111,7 +111,7 @@ function initializePlayer(client) {
                     "The queue is empty.";
                 const queueEmbed = new EmbedBuilder()
                     .setColor(config.embedColor)
-                    .setTitle("📜 **Current Queue**")
+                    .setTitle("📜 **Hàng chờ**")
                     .setDescription(queueMessage);
 
                 const sentMessage = await channel.send({ embeds: [queueEmbed] });
@@ -130,7 +130,7 @@ function initializePlayer(client) {
                 player.destroy();
                 const stopEmbed = new EmbedBuilder()
                     .setColor(config.embedColor)
-                    .setDescription('⏹️ **Playback has been stopped and player destroyed!**');
+                    .setDescription('⏹️ **Phát lại đã dừng và trình phát đã bị hủy!**');
 
                 const sentMessage = await channel.send({ embeds: [stopEmbed] });
                 setTimeout(() => sentMessage.delete().catch(console.error), config.embedTimeout * 1000);
@@ -138,15 +138,14 @@ function initializePlayer(client) {
                 if (player.paused) {
                     const alreadyPausedEmbed = new EmbedBuilder()
                         .setColor(config.embedColor)
-                        .setDescription('⏸️ **Playback is already paused!**');
-
+                        .setDescription('⏸️ **Phát lại đã dừng và trình phát đã bị hủy**');
                     const sentMessage = await channel.send({ embeds: [alreadyPausedEmbed] });
                     setTimeout(() => sentMessage.delete().catch(console.error), config.embedTimeout * 1000);
                 } else {
                     player.pause(true);
                     const pauseEmbed = new EmbedBuilder()
                         .setColor(config.embedColor)
-                        .setDescription('⏸️ **Playback has been paused!**');
+                        .setDescription('⏸️ **Phát lại đã bị tạm dừng!**');
 
                     const sentMessage = await channel.send({ embeds: [pauseEmbed] });
                     setTimeout(() => sentMessage.delete().catch(console.error), config.embedTimeout * 1000);
@@ -155,7 +154,7 @@ function initializePlayer(client) {
                 if (!player.paused) {
                     const alreadyResumedEmbed = new EmbedBuilder()
                         .setColor(config.embedColor)
-                        .setDescription('▶️ **Playback is already resumed!**');
+                        .setDescription('▶️ **Phát lại đã được tiếp tục!**');
 
                     const sentMessage = await channel.send({ embeds: [alreadyResumedEmbed] });
                     setTimeout(() => sentMessage.delete().catch(console.error), config.embedTimeout * 1000);
@@ -163,7 +162,7 @@ function initializePlayer(client) {
                     player.pause(false);
                     const resumeEmbed = new EmbedBuilder()
                         .setColor(config.embedColor)
-                        .setDescription('▶️ **Playback has been resumed!**');
+                        .setDescription('▶️ **Phát lại đã được tiếp tục!**');
 
                     const sentMessage = await channel.send({ embeds: [resumeEmbed] });
                     setTimeout(() => sentMessage.delete().catch(console.error), config.embedTimeout * 1000);
@@ -174,14 +173,14 @@ function initializePlayer(client) {
                     player.setVolume(Math.min(player.volume + 10, 100));
                     const volumeUpEmbed = new EmbedBuilder()
                         .setColor(config.embedColor)
-                        .setDescription(`🔊 **Volume increased by ${player.volume - oldVolume}% to ${player.volume}!**`);
+                        .setDescription(`🔊 **Khối lượng giảm đi ${player.volume - oldVolume}% to ${player.volume}!**`);
 
                     const sentMessage = await channel.send({ embeds: [volumeUpEmbed] });
                     setTimeout(() => sentMessage.delete().catch(console.error), config.embedTimeout * 1000);
                 } else {
                     const maxVolumeEmbed = new EmbedBuilder()
                         .setColor(config.embedColor)
-                        .setDescription('🔊 **Volume is already at maximum!**');
+                        .setDescription('🔊 **max volume rồi !**');
 
                     const sentMessage = await channel.send({ embeds: [maxVolumeEmbed] });
                     setTimeout(() => sentMessage.delete().catch(console.error), config.embedTimeout * 1000);
@@ -199,7 +198,7 @@ function initializePlayer(client) {
                 } else {
                     const minVolumeEmbed = new EmbedBuilder()
                         .setColor(config.embedColor)
-                        .setDescription('🔉 **Volume is already at minimum!**');
+                        .setDescription('🔉 **max volume rồi!**');
 
                     const sentMessage = await channel.send({ embeds: [minVolumeEmbed] });
                     setTimeout(() => sentMessage.delete().catch(console.error), config.embedTimeout * 1000);
@@ -275,14 +274,14 @@ function initializePlayer(client) {
             player.setLoop("queue");
             const loopEmbed = new EmbedBuilder()
                 .setColor(config.embedColor)
-                .setTitle("🔁 **Queue loop is activated!**");
+                .setTitle("🔁 **Vòng lặp hàng đợi được kích hoạt!**");
             const sentMessage = await channel.send({ embeds: [loopEmbed] });
             setTimeout(() => sentMessage.delete().catch(console.error), config.embedTimeout * 1000);
         } else {
             player.setLoop("track");
             const loopEmbed = new EmbedBuilder()
                 .setColor(config.embedColor)
-                .setTitle("🔁 **Track loop is activated!**");
+                .setTitle("🔁 **Vòng lặp theo dõi được kích hoạt!**");
             const sentMessage = await channel.send({ embeds: [loopEmbed] });
             setTimeout(() => sentMessage.delete().catch(console.error), config.embedTimeout * 1000);
         }
@@ -292,7 +291,7 @@ function initializePlayer(client) {
         player.setLoop("none");
         const loopEmbed = new EmbedBuilder()
             .setColor(config.embedColor)
-            .setTitle("❌ **Loop is disabled!**");
+            .setTitle("❌ **Vòng lặp bị vô hiệu hóa!**");
         const sentMessage = await channel.send({ embeds: [loopEmbed] });
         setTimeout(() => sentMessage.delete().catch(console.error), config.embedTimeout * 1000);
     }
