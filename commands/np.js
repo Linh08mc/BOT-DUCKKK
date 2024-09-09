@@ -22,7 +22,7 @@ async function nowPlaying(client, interaction) {
             const errorEmbed = new EmbedBuilder()
                 .setColor('#ff0000')
                 .setTitle('Error')
-                .setDescription('❌ There is no song currently playing.');
+                .setDescription('❌ Hiện tại không có bài hát nào đang phát.');
 
             await interaction.reply({ embeds: [errorEmbed], ephemeral: true });
             return;
@@ -44,7 +44,7 @@ async function nowPlaying(client, interaction) {
         const errorEmbed = new EmbedBuilder()
             .setColor('#ff0000')
             .setTitle('Error')
-            .setDescription('❌ An error occurred while processing your request.');
+            .setDescription('❌ Đã xảy ra lỗi khi xử lý yêu cầu của bạn.');
 
         await interaction.reply({ embeds: [errorEmbed], ephemeral: true });
     }
@@ -52,7 +52,7 @@ async function nowPlaying(client, interaction) {
 
 module.exports = {
     name: "np",
-    description: "Displays the currently playing song with a progress bar",
+    description: "Hiển thị bài hát đang phát với thanh tiến trình",
     permissions: "0x0000000000000800",
     options: [],
     run: nowPlaying,
