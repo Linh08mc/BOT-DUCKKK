@@ -41,4 +41,3 @@ module.exports = {
     options: [],
     run: resume
 };
-Tiếp tục bài hát hiện tại
