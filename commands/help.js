@@ -1,18 +1,20 @@
 /*
 
-  ________.__                        _____.___.___________
- /  _____/|  | _____    ____  ____   \__  |   |\__    ___/
-/   \  ___|  | \__  \ _/ ___\/ __ \   /   |   |  |    |   
-\    \_\  \  |__/ __ \\  \__\  ___/   \____   |  |    |   
- \______  /____(____  /\___  >___  >  / ______|  |____|   
-        \/          \/     \/    \/   \/                  
+
+  _   _ _           _   _____             _    
+ | \ | | |         | | |  __ \           | |   
+ |  \| | |__   __ _| |_| |  | |_   _  ___| | __
+ | . ` | '_ \ / _` | __| |  | | | | |/ __| |/ /
+ | |\  | | | | (_| | |_| |__| | |_| | (__|   < 
+ |_| \_|_| |_|\__,_|\__|_____/ \__,_|\___|_|\_\
+                                               
 
 ╔════════════════════════════════════════════════════════════════════════╗
 ║                                                                        ║
-║  ## Created by GlaceYT!                                                ║
-║  ## Feel free to utilize any portion of the code                       ║
-║  ## DISCORD :  https://discord.com/invite/xQF9f9yUEM                   ║
-║  ## YouTube : https://www.youtube.com/@GlaceYt                         ║
+║  ## Tạo bởi NhatDuck                                                   ║
+║  ## Facebook : Nhật Duck                                               ║
+║                                                                        ║
+║                                                                        ║
 ║                                                                        ║
 ╚════════════════════════════════════════════════════════════════════════╝
 
@@ -24,7 +26,7 @@ const config = require("../config.js");
 
 module.exports = {
   name: "help",
-  description: "Get information about the bot",
+  description: "Nhận thông tin về bot",
   permissions: "0x0000000000000800",
   options: [],
   run: async (client, interaction) => {
@@ -35,19 +37,15 @@ module.exports = {
 \`\`\`css
 Welcome to ${botName}!
 
-Your ultimate music companion on Discord. Here are the available commands:
+Người bạn đồng hành âm nhạc tuyệt vời của bạn trên Discord. Dưới đây là các lệnh có sẵn:
 
-[ /play    ] - Start playing the songs.
-[ /pause   ] - Pause the current song.
-[ /resume  ] - Resume the current song.
-[ /lyrics  ] - Displays the lyrics of a song.
-[ /skip    ] - Skip the current song.
-[ /stop    ] - Destroys the music player.
-[ /np      ] - Shows now playing song.
-[ /volume  ] - Sets the volume of the player.
-[ /ping    ] - Check bot latency.
-[ /support ] - Shows support server info.
-[ /help    ] - Display this help menu.
+[ /play    ] - Bắt đầu phát bài hát.
+[ /pause   ] - Tạm dừng bài hát hiện tại.
+[ /resume  ] - Tiếp tục bài hát hiện tại.
+[ /lyrics  ] - Hiển thị lời bài hát.
+[ /skip    ] - Bỏ qua bài hát hiện tại.
+[ /stop    ] - Hủy trình phát nhạc.
+[ /np      ] - quên r :)) 
 \`\`\`
       `;
 
@@ -69,20 +67,21 @@ Your ultimate music companion on Discord. Here are the available commands:
 
 /*
 
-  ________.__                        _____.___.___________
- /  _____/|  | _____    ____  ____   \__  |   |\__    ___/
-/   \  ___|  | \__  \ _/ ___\/ __ \   /   |   |  |    |   
-\    \_\  \  |__/ __ \\  \__\  ___/   \____   |  |    |   
- \______  /____(____  /\___  >___  >  / ______|  |____|   
-        \/          \/     \/    \/   \/                  
+  _   _ _           _   _____             _    
+ | \ | | |         | | |  __ \           | |   
+ |  \| | |__   __ _| |_| |  | |_   _  ___| | __
+ | . ` | '_ \ / _` | __| |  | | | | |/ __| |/ /
+ | |\  | | | | (_| | |_| |__| | |_| | (__|   < 
+ |_| \_|_| |_|\__,_|\__|_____/ \__,_|\___|_|\_\
+                                               
 
+                                               
+  
 ╔════════════════════════════════════════════════════════════════════════╗
-║                                                                        ║
-║  ## Created by GlaceYT!                                                ║
-║  ## Feel free to utilize any portion of the code                       ║
-║  ## DISCORD :  https://discord.com/invite/xQF9f9yUEM                   ║
-║  ## YouTube : https://www.youtube.com/@GlaceYt                         ║
-║                                                                        ║
+║                                                                                     ║
+║  ## Tạo bởi NhatDuck                                                                ║
+║  ## Facebook: Nhật Duck                                                             ║
+║                                                                                     ║
 ╚════════════════════════════════════════════════════════════════════════╝
 
 
