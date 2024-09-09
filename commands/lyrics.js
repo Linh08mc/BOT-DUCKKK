@@ -12,7 +12,7 @@ async function lyrics(client, interaction) {
             const errorEmbed = new EmbedBuilder()
                 .setColor('#ff0000')
                 .setTitle('Error')
-                .setDescription('❌ No active player found.');
+                .setDescription('❌ Không tìm thấy người chơi đang hoạt động.');
 
             await interaction.reply({ embeds: [errorEmbed], ephemeral: true });
             return;
@@ -77,12 +77,12 @@ async function lyrics(client, interaction) {
                     });
             }
         } catch (err) {
-            lyricEmbed.setDescription(`❌ No lyrics were found!`);
+            lyricEmbed.setDescription(`❌ Không tìm thấy lời bài hát!`);
             return interaction.editReply({ embeds: [lyricEmbed], ephemeral: true });
         }
 
         if (!lyricSong) {
-            lyricEmbed.setDescription(`❌ No lyrics were found!`);
+            lyricEmbed.setDescription(`❌ Không tìm thấy lời bài hát!`);
             return interaction.editReply({ embeds: [lyricEmbed], ephemeral: true });
         }
 
@@ -163,7 +163,7 @@ async function lyrics(client, interaction) {
 
 module.exports = {
     name: "lyrics",
-    description: "Displays the lyrics of the current song",
+    description: "Hiển thị lời bài hát hiện tại",
     permissions: "0x0000000000000800",
     options: [{
         name: 'search',
