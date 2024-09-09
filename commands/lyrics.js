@@ -167,7 +167,7 @@ module.exports = {
     permissions: "0x0000000000000800",
     options: [{
         name: 'search',
-        description: 'Search query for lyrics',
+        description: 'Truy vấn tìm kiếm lời bài hát',
         type: ApplicationCommandOptionType.String,
         required: false
     }],
