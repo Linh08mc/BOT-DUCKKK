@@ -105,21 +105,22 @@ async function play(client, interaction) {
                     iconURL: config.CheckmarkIcon,
                     url: config.SupportServer
                 })
-                .setDescription(setFooter({ text: '🎶 Thưởng thức âm nhạc của bạn!'})
-        ];
+                .setColor(config.embedColor)
+                .setAuthor({
+                    name: 'Request Update',
+                    iconURL: config.CheckmarkIcon,
+                    url: config.SupportServer
+                })
+                .setDescription('**➡️ Your request has been successfully processed.**\n**➡️ Please use buttons to control playback**')
+                 .setFooter({ text: '🎶 Enjoy your music!'}),
 
-        const randomIndex = Math.floor(Math.random() * embeds.length);
-        await interaction.followUp({ embeds: [embeds[randomIndex]] });
-
-    } catch (error) {
-        console.error('Error processing play command:', error);
-        const errorEmbed = new EmbedBuilder()
-            .setColor('#ff0000')
-            .setTitle('Error')
-            .setDescription('❌ Đã xảy ra lỗi khi xử lý yêu cầu của bạn.');
-
-        await interaction.editReply({ embeds: [errorEmbed] });
-    }
+            new EmbedBuilder()
+                .setColor(config.embedColor)
+                .setAuthor({
+                    name: 'Request Update',
+                    iconURL: config.CheckmarkIcon,
+                    url: config.SupportServer
+                })
 }
 
 module.exports = {
