@@ -132,8 +132,8 @@ async function play(client, interaction) {
         console.error('Error processing play command:', error);
         const errorEmbed = new EmbedBuilder()
             .setColor('#ff0000')
-            .setTitle('Error')
-            .setDescription('❌ An error occurred while processing your request.');
+            .setTitle(' Đã cập nhật link nhạc ')
+            .setDescription(' 🇻🇳 đang bật nhạc thì ghi skip.');
 
         await interaction.editReply({ embeds: [errorEmbed] });
     }
