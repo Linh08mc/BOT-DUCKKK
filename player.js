@@ -59,7 +59,7 @@ function initializePlayer(client) {
                 name: 'Now Playing',
                 iconURL: config.MusicIcon
             })
-            .setDescription('🎶 **Bảng điều khiển:**\n 🔁 `Lặp lại`, ❌ `Vô hiệu hóa`, ⏭️ `Nhạc tiếp`, 📜 `Hàng đợi`, 🗑️ `Dọn dẹp`\n ⏹️ `Dừng lại`, ⏸️ `Dừng`, ▶️ `Tiếp tục`, 🔊 `Vol +`, 🔉 `Vol -`')
+            .setDescription('🎶 **Bảng điều khiển:**\n 🔁 `Lặp lại`, ❌ `Dừng hẳn`, ⏭️ `Nhạc tiếp`, 📜 `Hàng đợi`, 🗑️ `Dọn dẹp`\n ⏹️ `Dừng lại`, ⏸️ `Dừng`, ▶️ `Tiếp tục`, 🔊 `Vol +`, 🔉 `Vol -`')
             .setImage('attachment://musicard.png')
             .setColor(config.embedColor);
 
